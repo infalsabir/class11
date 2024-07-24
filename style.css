@@ -1,60 +1,73 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background-image: url(./aaabeed1-d465-4edf-a9f3-7009d038dd0b.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-.exchange-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.exchange-item {
-    margin-bottom: 10px;
-}
-
-input, select, button {
-    padding: 10px;
-    font-size: 16px;
-    margin: 5px;
-    width: 200px;
-}
-
-.exchange-icon {
-    font-size: 2em;
-    margin: 10px;
-}
-
-.exchange-button {
-    background-color: #4CAF50;
+/* Button to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: #555;
     color: white;
+    padding: 12px 16px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-}
+    opacity: 0.8;
+    /* position: fixed; */
+    /* bottom: 23px; */
+    right: 28px;
+    width: 80px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #f1f1f1;
+    z-index: 9;
 
-.exchange-button:hover {
-    background-color: #45a049;
-}
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text],
+  .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, change background color */
+  .form-container input[type=text]:focus,
+  .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Style for the submit/login button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+  
+  /* Red background color for the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Hover effects for buttons */
+  .form-container .btn:hover,
+  .open-button:hover {
+    opacity: 1;
+  }
+  
